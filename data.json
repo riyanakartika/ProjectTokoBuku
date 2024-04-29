@@ -1,0 +1,24 @@
+{
+    "Toko Buku": {
+        "Nama": "Toko Buku Sebelah",
+        "Alamat": "Jl. Sudirman",
+        "Pengarang": "Sukiman",
+        "Koleksi Buku": [
+            {
+                "Judul": "Hapalan codingan",
+                "Kategori": "Fiksi",
+                "Harga": 200000
+            },
+            {
+                "Judul": "1001 cara menjadi idol",
+                "Kategori": "Fantasi",
+                "Harga": 100000
+            },
+            {
+                "Judul": "Menjadi anak Magang di top 3 company",
+                "Kategori": "Non-Fiksi",
+                "Harga": 90000
+            }
+        ]
+    }
+}
