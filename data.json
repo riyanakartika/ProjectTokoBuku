@@ -1,23 +1,23 @@
 {
-    "Toko Buku": {
-        "Nama": "Toko Buku Sebelah",
-        "Alamat": "Jl. Sudirman",
-        "Pengarang": "Sukiman",
-        "Koleksi Buku": [
+    "toko_buku": {
+        "nama": "Toko Buku Sebelah",
+        "alamat": "Jl. Sudirman",
+        "pengarang": "Sukiman",
+        "koleksi_buku": [
             {
-                "Judul": "Hapalan codingan",
-                "Kategori": "Fiksi",
-                "Harga": 200000
+                "judul": "Hapalan codingan",
+                "kategori": "Fiksi",
+                "harga": 200000
             },
             {
-                "Judul": "1001 cara menjadi idol",
-                "Kategori": "Fantasi",
-                "Harga": 100000
+                "judul": "1001 cara menjadi idol",
+                "kategori": "Fantasi",
+                "harga": 100000
             },
             {
-                "Judul": "Menjadi anak Magang di top 3 company",
-                "Kategori": "Non-Fiksi",
-                "Harga": 90000
+                "judul": "Menjadi anak Magang di top 3 company",
+                "kategori": "Non-Fiksi",
+                "harga": 90000
             }
         ]
     }
