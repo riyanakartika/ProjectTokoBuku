@@ -20,6 +20,22 @@
             }
         });
     });
+
+    function loadbloc() {
+    // Mengambil data JSON toko buku dan menampilkan koleksi buku dalam bentuk tabel
+    $.ajax({
+        url: 'data.json',
+        dataType: 'json',
+        success: function(data){
+            var table = '<table><tr><th>Judul Buku</th><th>Kategori</th><th>Harga</th></tr>';
+            $.each(data.toko_buku.koleksi_buku, function(index, book){
+                table += '<tr><td>' + book.judul + '</td><td>' + book.kategori + '</td><td>' + book.harga + '</td></tr>';
+            });
+            table += '</table>';
+            $('#koleksi_buku').html(table);
+        }
+    });
+}
     </script>
 
 </body>
