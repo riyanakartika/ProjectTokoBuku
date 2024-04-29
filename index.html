@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Project</title>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        // Pengambilan data toko buku dilakukan saat halaman dimuat
-        $.ajax({
-            url: 'data.json',
-            dataType: 'json',
-            success: function(data){
-                // Menampilkan informasi toko buku
-                $('#nama_toko').text(data.toko_buku.nama);
-                $('#alamat_toko').text(data.toko_buku.alamat);
-                $('#pengarang_toko').text(data.toko_buku.pengarang);
-            }
-        });
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toko Buku</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    // Pengambilan data toko buku dilakukan saat halaman dimuat
+    $.ajax({
+        url: 'data.json',
+        dataType: 'json',
+        success: function(data){
+            // Menampilkan informasi toko buku
+            $('#nama_toko').text(data.toko_buku.nama);
+            $('#alamat_toko').text(data.toko_buku.alamat);
+            $('#pengarang_toko').text(data.toko_buku.pengarang);
+        }
     });
+});
 
-    function loadbloc() {
+function loadbloc() {
     // Mengambil data JSON toko buku dan menampilkan koleksi buku dalam bentuk tabel
     $.ajax({
         url: 'data.json',
@@ -36,7 +35,25 @@
         }
     });
 }
-    </script>
+</script>
 
+</head>
+<body>
+    <div id="bloc">
+        <h2>Menggunakan AJAX untuk menampilkan data toko buku</h2>
+        <button type="button" onclick="loadbloc()">Tekan tombol</button>
+    </div>
+
+    <div>
+        <!-- Informasi toko buku akan ditampilkan di sini -->
+        <h2>Informasi Toko Buku</h2>
+        <div>Nama Toko: <span id="nama_toko"></span></div>
+        <div>Alamat Toko: <span id="alamat_toko"></span></div>
+        <div>Pengarang Toko: <span id="pengarang_toko"></span></div>
+    </div>
+
+    <div id="koleksi_buku">
+        <!-- Tabel koleksi buku akan ditampilkan di sini -->
+    </div>
 </body>
 </html>
